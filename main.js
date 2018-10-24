@@ -4,7 +4,7 @@ $.getJSON('https://api.airtable.com/v0/appUPAzb0MxNy4F7A/Table%201?api_key=keyja
     $.each(airtable.records, function(index, record) {
       var name = record.fields['Name'];
       var address = record.fields['Address'];
-      var Levels = record.fields['Levels'];
+      var levels = record.fields['Levels'];
       html.push(`<h2>${name}, ${address}, ${rating}</h2>`);
     });
     $('body').append(html);
