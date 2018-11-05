@@ -6,8 +6,8 @@ $.getJSON('https://api.airtable.com/v0/appUPAzb0MxNy4F7A/Table%201?api_key=keyja
       var description = record.fields['Description'];
       var levels = record.fields['Levels'];
       var learning = record.fields['Learning'];
-      <button type="button" class="btn btn-primary">Primary</button>
-      html.push(`<button type="button" class="btn btn-primary">$(name)</button>`);
+
+      html.push(`<button type="button" class="btn btn-primary">${name}</button>`);
     });
     $('body').append(html);
   }
