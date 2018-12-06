@@ -9,7 +9,7 @@ function getParameterByName(name, url) {
 }
 
 var getAllRecords = function () {
-  $.getJSON('https://api.airtable.com/v0/appUPAzb0MxNy4F7A/BEATBOX%20TUTORIALS?api_key=keyjafBekvjEMp3cm',
+  $.getJSON('https://api.airtable.com/v0/appUPAzb0MxNy4F7A/BEATBOX%20TUTORIALS?api_key=keyjafBekvjEMp3cm&view=Grid%20view',
     function (airtable) {
       var html = [];
       $.each(airtable.records, function (index, record) {
@@ -76,7 +76,7 @@ if (id) {
   getAllRecords();
 }
 
-/*var getAllRecordsBattles = function () {
+var getAllRecordsBattles = function () {
   $.getJSON('https://api.airtable.com/v0/appUPAzb0MxNy4F7A/BEATBOX%20BATTLES?keyjafBekvjEMp3cm',
   function (airtable) {
     var html = [];
@@ -90,12 +90,12 @@ if (id) {
        
       html.push(listView2(id, name, title, description, pictures, videos ));
     });
-      $('.listview-two').append(html);
+      $('.battle').append(html);
   }
 );
 }
 
-/*var listView2 = function (id, name, title, description, pictures, videos) {
+var listView2 = function (id, name, title, description, pictures, videos) {
   return `
   <div class="card" style="width: 50rem;">
   <h2><a href="battle.html?id=${id}">${name}</a></h2> 
@@ -107,7 +107,7 @@ if (id) {
     </div>
   </div>
   `;
-}*/
+}
 
 
 /*var id = getParameterByName('id');
